@@ -538,6 +538,11 @@ blockquote footer {
   overflow: hidden;
 }
 
+.summary-with-cover .frame-inner {
+  display: flex;
+  align-items: stretch;
+}
+
 .hero-cover,
 .summary-cover {
   position: relative;
@@ -552,7 +557,28 @@ blockquote footer {
 }
 
 .summary-cover {
-  aspect-ratio: 16 / 9;
+  flex: none;
+  width: 6.5rem;
+  min-height: 6.5rem;
+  border-radius: 7px 0 0 7px;
+}
+
+@media (min-width: 800px) {
+  .summary-cover {
+    width: 11rem;
+  }
+}
+
+.summary-with-cover .summary-inner {
+  flex: 1;
+  min-width: 0;
+}
+
+.summary-cover .example-label {
+  top: 0.4rem;
+  left: 0.4rem;
+  padding: 0.12rem 0.4rem;
+  font-size: 0.7rem;
 }
 
 .cover-img {

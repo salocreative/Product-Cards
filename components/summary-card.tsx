@@ -28,7 +28,7 @@ export function SummaryCard({ card }: { card: Card }) {
       : null;
 
   return (
-    <article className="summary">
+    <article className={card.cover_image_url ? "summary summary-with-cover" : "summary"}>
       <div className="frame">
         <div className="frame-inner">
           {card.cover_image_url ? (
@@ -36,7 +36,7 @@ export function SummaryCard({ card }: { card: Card }) {
               url={card.cover_image_url}
               alt={card.cover_image_alt ?? null}
               source={card.cover_image_source ?? null}
-              sizes="(min-width: 800px) 72rem, calc(100vw - 2.5rem)"
+              sizes="(min-width: 800px) 11rem, 6.5rem"
               className="summary-cover"
             />
           ) : null}
